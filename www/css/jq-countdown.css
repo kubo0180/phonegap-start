@@ -1,0 +1,7 @@
+.cntSeparator { display: none; }
+
+#counter:after { 
+  content: "";
+  display: table;
+  clear: both; 
+}
