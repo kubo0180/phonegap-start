@@ -23,54 +23,50 @@
   <meta name="format-detection" content="telephone=no" />
   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
   <link rel="stylesheet" type="text/css" href="jqm/jquery.mobile-1.4.2.min.css" />
-  <link rel="stylesheet" type="text/css" href="css/jq-countdown.css" />
+  <link rel="stylesheet" type="text/css" href="jqm/jqm-datebox/jqm-datebox.min.css" />
   <link rel="stylesheet" type="text/css" href="css/app.css" />
   <title>Sample App</title>
 </head>
 <body>
-
-  <!-- index page -->
-  <div data-role="page" id="index">
-    <div data-role="header">
-      <h1>Exprain</h1>
+  <!-- main page -->
+  <div data-role="page" id="main"> 
+    <div data-role="header" data-theme="b"> 
+      <h1>TODOリスト</h1>
     </div>
-    <div role="main" class="ui-content">
-      <h2>How to solve</h2>
-      <ul data-role="listview" id="index">
-        <li><a href="#p1" data-icon="arrow-r" data-iconpos="right">p.1</a></li>
+    <div role="content" class="ui-content">
+      <a href="#add" data-rel="dialog" data-transition="pop" class="ui-btn ui-btn-b ui-corner-all">追加</a>
+      <br />
+      <ul data-role="listview" id="todoList">
+        <li>sample todo</li>
+        <li>sample todo</li>
+        <li>sample todo</li>
+        <li>sample todo</li>
+        <li>sample todo</li>
+        <li>sample todo</li>
       </ul>
+    </div>       
+    <div data-role="footer">
+      <a data-role="button" id="delButton" data-icon="delete">すべて削除</a>
     </div>
   </div>
-  <!--/ index page -->
-
-  <!-- page no.1 -->
-  <div data-role="page" id="p1">
-    <div data-role="header">
-      <h1>Soroban</h1>
+  <!--/ main page -->
+             
+  <!-- add page -->
+  <div data-role="page" id="add"> 
+    <div data-role="header" data-theme="c"> 
+      <h2>TODOの追加</h2>
     </div>
-    <div role="main" class="ui-content">
-      <h2>p.1</h2>
-      <p>First problem</p>
-      <a href="#p2" data-icon="arrow-r" class="next_link ui-btn ui-btn-b">Next</a>
-    </div>
-  </div>
-  <!--/ page no.1 -->
-
-  <!-- page no.2 -->
-  <div data-role="page" id="p2">
-    <div data-role="header">
-      <h1>Soroban</h1>
-    </div>
-    <div role="main" class="ui-content">
-      <h2>p.2</h2>
-      <p>2nd problem</p>
-      <a href="#index" data-icon="arrow-r" class="next_link ui-btn ui-btn-b">Next</a>
+    <div role="content" class="ui-content">
+      <div data-role="fieldcontain">
+        <label for="todoDescription">入力:</label>
+        <input type="text" name="todoDescription" id="todoDescription" value=""  />
+      </div>
+      <a href="#main" data-role="button" id="addButton" data-theme="b">追加</a>
+      <a href="#main" data-role="button">キャンセル</a>
     </div>
   </div>
-  <!--/ page no.2 -->
   <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
   <script type="text/javascript" src="jqm/jquery.mobile-1.4.2.min.js"></script>
-  <script type="text/javascript" src="js/jquery.countdown.js"></script>
-  <script type="text/javascript" src="js/levle01.js"></script>
+  <script type="text/javascript" src="js/todo.js"></script>
 </body>
 </html>
